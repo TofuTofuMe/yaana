@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:yaana/views/navbase.dart';
 
 void main() {
-  runApp(YetAnotherAnimeApp());
+  runApp(ProviderScope(child: YetAnotherAnimeApp()));
 }
 
 class YetAnotherAnimeApp extends StatelessWidget {
