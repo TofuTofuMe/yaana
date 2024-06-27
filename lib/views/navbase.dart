@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:yaana/views/home.dart';
 import 'package:yaana/views/settings.dart';
 
-class Navbase extends StatefulWidget {
+class Navbase extends ConsumerStatefulWidget {
   const Navbase({super.key});
 
   @override
-  State<Navbase> createState() => _NavbarState();
+  ConsumerState<Navbase> createState() => _NavbarState();
 }
 
-class _NavbarState extends State<Navbase> {
+class _NavbarState extends ConsumerState<Navbase> {
   int _selectedIndex = 0;
 
   @override
