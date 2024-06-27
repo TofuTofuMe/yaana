@@ -19,7 +19,7 @@ class _NavbarState extends ConsumerState<Navbase> {
       appBar: AppBar(
         title: Center(
             child: Text(
-          'yet another anime app',
+          'yetanotheranimeapp',
           style: Theme.of(context).appBarTheme.titleTextStyle,
         )),
         backgroundColor: Theme.of(context).colorScheme.primary,
