@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:yaana/models/api_model.dart';
+import 'package:yaana/providers/config_provider.dart';
 import 'package:yaana/providers/episodelist_provider.dart';
 import 'package:yaana/data/client.dart';
 import 'package:yaana/widgets/episode_list.dart';
@@ -21,7 +22,8 @@ class _DetailsState extends ConsumerState<Details> {
   @override
   void initState() {
     super.initState();
-    _detailedAnime = getDetailedAnime('gogoanime', widget.anime).then((anime) {
+    final animeService = ref.read(configProvider).animeService;
+    _detailedAnime = getDetailedAnime(animeService, widget.anime).then((anime) {
       ref.read(episodeListProvider.notifier).setList(anime.episodes);
       return anime;
     });
