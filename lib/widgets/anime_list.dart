@@ -13,7 +13,9 @@ class AnimeListWidget extends ConsumerWidget {
     final showSubOrDub = ref.read(configProvider).showSubOrDub;
     final animeFiltered = [];
     for (final anime in animeList) {
-      if (anime.subOrDub == showSubOrDub || showSubOrDub == 'both') {
+      if (anime.subOrDub == showSubOrDub ||
+          anime.subOrDub == null ||
+          showSubOrDub == 'both') {
         animeFiltered.add(anime);
       }
     }
