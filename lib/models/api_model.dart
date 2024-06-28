@@ -2,7 +2,7 @@ class Anime {
   final String id;
   final String title;
   final String image;
-  final String subOrDub;
+  final String? subOrDub;
 
   const Anime(
       {required this.id,
