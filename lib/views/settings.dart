@@ -16,7 +16,7 @@ class _SettingsState extends ConsumerState<Settings> {
   final _showSubOrDubController = TextEditingController();
 
   final List<String> animeServices = ['gogoanime'];
-  final List<String> videoResolutions = ['480p', '720p', '1080p'];
+  final List<String> videoResolutions = ['360p', '480p', '720p', '1080p'];
   final List<String> showSubOrDub = ['sub', 'dub', 'both'];
 
   @override
