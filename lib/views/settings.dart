@@ -35,6 +35,7 @@ class _SettingsState extends ConsumerState<Settings> {
         child: Column(
           children: [
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Column(
                   children: [
